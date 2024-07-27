@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Report Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Client Report Generator</h1>
+        <div id="itemCounter">Items: 0 / 20</div>
+        <form id="reportForm">
+            <div id="reportItems">
+                <!-- Report items will be dynamically added here -->
+            </div>
+            <button type="button" id="addItem" class="btn secondary">+ Add Item</button>
+            <div class="memo-box">
+                <label for="memo">Additional Notes:</label>
+                <textarea id="memo" name="memo" rows="4"></textarea>
+            </div>
+            <button type="submit" class="btn primary">Generate Report</button>
+        </form>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
