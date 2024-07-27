@@ -33,20 +33,45 @@ h1 {
     background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     padding: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
 }
 
 .report-item input[type="text"],
-.report-item input[type="file"],
-.memo-box textarea {
+.report-item input[type="file"] {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
     margin-bottom: 10px;
     background: rgba(255, 255, 255, 0.1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 5px;
     color: #ffffff;
+    box-sizing: border-box;
+}
+
+.report-item input[type="file"] {
+    padding: 5px;
+}
+
+.memo-box {
+    margin-top: 20px;
+}
+
+.memo-box label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.memo-box textarea {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    color: #ffffff;
+    box-sizing: border-box;
+    resize: vertical;
 }
 
 .btn {
@@ -59,6 +84,7 @@ h1 {
     transition: background-color 0.3s ease;
     font-size: 16px;
     margin-top: 10px;
+    width: 100%;
 }
 
 .btn:hover {
@@ -68,27 +94,60 @@ h1 {
 .btn.secondary {
     background-color: #4a5568;
     color: #ffffff;
+    margin-top: 5px;
 }
 
 .btn.secondary:hover {
     background-color: #2d3748;
 }
 
-.memo-box {
-    margin-top: 30px;
+#addItem {
+    margin-bottom: 20px;
 }
 
-.memo-box label {
-    display: block;
-    margin-bottom: 10px;
-}
+@media (min-width: 768px) {
+    .report-item {
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 10px;
+    .report-item input[type="text"] {
+        flex: 1;
+        margin-right: 10px;
+        margin-bottom: 0;
+    }
+
+    .report-item input[type="file"] {
+        width: auto;
+        margin-bottom: 0;
     }
 
     .btn {
-        width: 100%;
+        width: auto;
+    }
+
+    .btn.secondary {
+        margin-left: 10px;
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    .report-item {
+        padding: 12px;
+    }
+
+    .btn {
+        padding: 8px 16px;
+        font-size: 14px;
     }
 }
