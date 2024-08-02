@@ -20,9 +20,21 @@
                 <label for="memo">Additional Notes:</label>
                 <textarea id="memo" name="memo" rows="4"></textarea>
             </div>
-            <button type="submit" class="btn primary">Generate Report</button>
+            <div class="button-group">
+                <button type="button" id="previewReport" class="btn secondary">Preview Report</button>
+                <button type="submit" class="btn primary">Generate Report</button>
+            </div>
         </form>
     </div>
+    
+    <div id="previewModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="previewContent"></div>
+        </div>
+    </div>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="script.js"></script>
 </body>
+</html>
